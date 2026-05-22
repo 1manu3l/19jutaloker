@@ -1,0 +1,314 @@
+/* ============================================================
+   auth.css
+   Styling untuk halaman login.php dan register.php
+   Letakkan di: assets/css/auth.css
+   ============================================================ */
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ============================================================
+   WRAPPER — pembungkus seluruh konten tengah
+   ============================================================ */
+.auth-wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* ============================================================
+   HEADER — logo dan judul di atas kotak form
+   ============================================================ */
+.auth-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.auth-logo {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.auth-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ============================================================
+   KOTAK FORM
+   ============================================================ */
+.auth-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.auth-box-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+/* ============================================================
+   ALERT — pesan error / sukses / info
+   ============================================================ */
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.alert-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-sukses {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.alert-info {
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+/* ============================================================
+   FORM GROUP — label + input
+   ============================================================ */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+/* Tanda bintang merah untuk field wajib */
+.wajib {
+    color: #ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1a1a2e;
+    background: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    background: #ffffff;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+/* ============================================================
+   INPUT PASSWORD — dengan tombol show/hide
+   ============================================================ */
+.input-password {
+    position: relative;
+}
+
+.input-password input {
+    padding-right: 44px; /* ruang untuk tombol mata */
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    color: #9ca3af;
+}
+
+.toggle-pw:hover {
+    color: #6366f1;
+}
+
+/* ============================================================
+   TOMBOL SUBMIT
+   ============================================================ */
+.btn-auth {
+    width: 100%;
+    padding: 12px;
+    background: #6366f1;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 4px;
+}
+
+.btn-auth:hover {
+    background: #4f46e5;
+}
+
+.btn-auth:active {
+    transform: scale(0.98);
+}
+
+/* ============================================================
+   LINK BAWAH — ke register / login
+   ============================================================ */
+.auth-link {
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 18px;
+}
+
+.auth-link a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   AKUN DEMO — hanya untuk keperluan testing
+   ============================================================ */
+.demo-accounts {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px dashed #cbd5e1;
+}
+
+.demo-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.demo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.demo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 10px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.demo-item:hover {
+    border-color: #6366f1;
+    background: #f5f3ff;
+}
+
+.demo-role {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    min-width: 78px;
+    text-align: center;
+}
+
+.demo-role.admin      { background: #ede9fe; color: #5b21b6; }
+.demo-role.perusahaan { background: #fef3c7; color: #92400e; }
+.demo-role.mahasiswa  { background: #dbeafe; color: #1e40af; }
+
+.demo-email {
+    font-size: 12px;
+    color: #475569;
+    font-family: monospace;
+}
+
+.demo-pass {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.demo-pass code {
+    background: #e2e8f0;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #475569;
+}
+
+/* ============================================================
+   RESPONSIVE — layar kecil / HP
+   ============================================================ */
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 24px 20px;
+    }
+
+    .auth-title {
+        font-size: 20px;
+    }
+
+    .demo-grid {
+        gap: 5px;
+    }
+}

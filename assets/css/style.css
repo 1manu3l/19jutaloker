@@ -1,0 +1,422 @@
+/* ============================================================
+   style.css — Stylesheet utama halaman publik
+   Letakkan di: assets/css/style.css
+   ============================================================ */
+
+/* ---- Reset & Base ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    position: sticky; top: 0; z-index: 100;
+}
+.nav-inner {
+    display: flex; align-items: center; gap: 24px;
+    padding: 14px 20px; max-width: 1100px; margin: 0 auto;
+}
+.nav-logo { font-size: 18px; font-weight: 700; color: #4f46e5; }
+.nav-menu { list-style: none; display: flex; gap: 4px; flex: 1; }
+.nav-menu a {
+    font-size: 14px; color: #4b5563; padding: 6px 12px;
+    border-radius: 8px; transition: background 0.2s;
+}
+.nav-menu a:hover, .nav-menu a.aktif {
+    background: #ede9fe; color: #4f46e5; font-weight: 500;
+}
+.nav-action { display: flex; gap: 8px; align-items: center; }
+.btn-nav-login {
+    font-size: 13px; padding: 7px 16px; border-radius: 8px;
+    border: 1.5px solid #4f46e5; color: #4f46e5; font-weight: 500;
+    transition: background 0.2s;
+}
+.btn-nav-login:hover { background: #ede9fe; }
+.btn-nav-daftar {
+    font-size: 13px; padding: 7px 16px; border-radius: 8px;
+    background: #4f46e5; color: #fff; font-weight: 500;
+    transition: background 0.2s;
+}
+.btn-nav-daftar:hover { background: #4338ca; }
+.btn-nav-dash {
+    font-size: 13px; padding: 7px 16px; border-radius: 8px;
+    background: #ede9fe; color: #4f46e5; font-weight: 500;
+}
+.btn-nav-logout {
+    font-size: 13px; padding: 7px 16px; border-radius: 8px;
+    border: 1.5px solid #e5e7eb; color: #6b7280;
+}
+.btn-nav-logout:hover { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+.nav-hamburger { display: none; background: none; border: none; font-size: 22px; cursor: pointer; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #fff; padding: 64px 0;
+}
+.hero-judul { font-size: 36px; font-weight: 700; margin-bottom: 14px; line-height: 1.3; }
+.hero-sub { font-size: 16px; opacity: 0.9; margin-bottom: 28px; max-width: 560px; }
+.hero-search {
+    display: flex; gap: 10px; max-width: 560px; margin-bottom: 36px;
+}
+.hero-input {
+    flex: 1; padding: 12px 16px; border-radius: 10px; border: none;
+    font-size: 14px; color: #1a1a2e; outline: none;
+}
+.hero-btn {
+    padding: 12px 24px; background: #fbbf24; color: #1a1a2e;
+    border: none; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer;
+    transition: background 0.2s;
+}
+.hero-btn:hover { background: #f59e0b; }
+.hero-stats { display: flex; gap: 32px; }
+.hero-stat { display: flex; flex-direction: column; }
+.hero-stat-num { font-size: 28px; font-weight: 700; }
+.hero-stat-lbl { font-size: 13px; opacity: 0.8; }
+
+/* ============================================================
+   SECTION UMUM
+   ============================================================ */
+.section-kategori { padding: 40px 0; }
+.section-lowongan { padding: 40px 0; background: #fff; }
+.section-judul { font-size: 22px; font-weight: 600; margin-bottom: 20px; color: #1a1a2e; }
+.section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.link-lihat-semua { font-size: 14px; color: #4f46e5; font-weight: 500; }
+.link-lihat-semua:hover { text-decoration: underline; }
+
+/* ============================================================
+   KATEGORI GRID
+   ============================================================ */
+.kategori-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.kategori-card {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 18px; background: #fff; border: 1.5px solid #e5e7eb;
+    border-radius: 30px; font-size: 13px; font-weight: 500; color: #374151;
+    transition: all 0.2s; cursor: pointer;
+}
+.kategori-card:hover, .kategori-card.aktif-all {
+    background: #ede9fe; border-color: #a5b4fc; color: #4f46e5;
+}
+.kategori-icon { font-size: 16px; }
+
+/* ============================================================
+   JOB CARD — Grid (beranda)
+   ============================================================ */
+.lowongan-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.job-card {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px;
+    padding: 18px; transition: box-shadow 0.2s, border-color 0.2s;
+}
+.job-card:hover { box-shadow: 0 4px 20px rgba(79,70,229,0.1); border-color: #a5b4fc; }
+.job-card-header { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.job-logo {
+    width: 44px; height: 44px; border-radius: 10px; background: #ede9fe;
+    color: #4f46e5; font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.job-judul { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.job-judul a { color: #1a1a2e; }
+.job-judul a:hover { color: #4f46e5; }
+.job-perusahaan { font-size: 12px; color: #4f46e5; }
+.job-perusahaan:hover { text-decoration: underline; }
+.job-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tag-kategori {
+    font-size: 11px; padding: 2px 10px; border-radius: 20px;
+    background: #f1f5f9; color: #475569; font-weight: 500;
+}
+.tag-tutup { font-size: 11px; padding: 2px 10px; border-radius: 20px; background: #fee2e2; color: #991b1b; }
+.job-info { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
+.job-lokasi, .job-gaji, .job-deadline { font-size: 12px; color: #6b7280; }
+.job-gaji { color: #166534; font-weight: 500; }
+.job-footer { display: flex; justify-content: space-between; align-items: center; }
+.btn-lihat {
+    font-size: 12px; padding: 6px 14px; background: #ede9fe; color: #4f46e5;
+    border-radius: 8px; font-weight: 500; transition: background 0.2s;
+}
+.btn-lihat:hover { background: #c7d2fe; }
+
+/* ============================================================
+   JOB CARD — List (halaman lowongan.php)
+   ============================================================ */
+.job-card-list {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 12px;
+    padding: 16px; margin-bottom: 12px; transition: box-shadow 0.2s;
+}
+.job-card-list:hover { box-shadow: 0 2px 16px rgba(79,70,229,0.08); border-color: #a5b4fc; }
+.job-logo-list {
+    width: 48px; height: 48px; border-radius: 10px; background: #ede9fe;
+    color: #4f46e5; font-size: 15px; font-weight: 700; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+}
+.job-detail { flex: 1; }
+.job-judul-list { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+.job-judul-list a { color: #1a1a2e; }
+.job-judul-list a:hover { color: #4f46e5; }
+.job-meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 6px; }
+.job-action-list { flex-shrink: 0; }
+.btn-detail {
+    font-size: 13px; padding: 8px 18px; background: #4f46e5; color: #fff;
+    border-radius: 8px; font-weight: 500; transition: background 0.2s;
+}
+.btn-detail:hover { background: #4338ca; }
+
+/* ============================================================
+   LAYOUT FILTER (lowongan.php)
+   ============================================================ */
+.layout-filter { display: flex; gap: 24px; padding-top: 30px; padding-bottom: 40px; align-items: flex-start; }
+.filter-sidebar { width: 240px; flex-shrink: 0; }
+.lowongan-list { flex: 1; }
+.filter-box { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.filter-judul { font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 10px; }
+.filter-input, .filter-select {
+    width: 100%; padding: 8px 12px; border: 1.5px solid #e5e7eb; border-radius: 8px;
+    font-size: 13px; outline: none;
+}
+.filter-input:focus, .filter-select:focus { border-color: #6366f1; }
+.filter-radio { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #374151; margin-bottom: 6px; cursor: pointer; }
+.btn-filter {
+    width: 100%; padding: 10px; background: #4f46e5; color: #fff;
+    border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px;
+}
+.btn-filter:hover { background: #4338ca; }
+.btn-reset-filter {
+    display: block; text-align: center; margin-top: 8px; font-size: 13px;
+    color: #6b7280; padding: 8px;
+}
+.btn-reset-filter:hover { color: #4f46e5; }
+.list-header { margin-bottom: 14px; }
+.list-info { font-size: 13px; color: #6b7280; }
+.page-banner {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #fff; padding: 40px 0;
+}
+.page-banner h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+.page-banner p { font-size: 15px; opacity: 0.85; }
+
+/* ============================================================
+   DETAIL LOWONGAN
+   ============================================================ */
+.breadcrumb { font-size: 13px; color: #6b7280; margin-bottom: 20px; }
+.breadcrumb a { color: #4f46e5; }
+.breadcrumb a:hover { text-decoration: underline; }
+.layout-detail { display: flex; gap: 24px; align-items: flex-start; }
+.detail-main { flex: 1; }
+.detail-sidebar { width: 280px; flex-shrink: 0; }
+.detail-header {
+    display: flex; gap: 16px; background: #fff; border: 1.5px solid #e5e7eb;
+    border-radius: 14px; padding: 20px; margin-bottom: 16px;
+}
+.detail-logo {
+    width: 60px; height: 60px; border-radius: 12px; background: #ede9fe;
+    color: #4f46e5; font-size: 18px; font-weight: 700; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+}
+.detail-judul { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.detail-perusahaan { font-size: 14px; color: #4f46e5; display: block; margin-bottom: 8px; }
+.detail-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.detail-info-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px;
+    padding: 16px; margin-bottom: 16px;
+}
+.detail-info-label { display: block; font-size: 11px; color: #6b7280; margin-bottom: 3px; font-weight: 500; }
+.detail-info-item { font-size: 14px; color: #1a1a2e; }
+.detail-section {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px;
+    padding: 20px; margin-bottom: 16px;
+}
+.detail-section h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; color: #1a1a2e; }
+.detail-text { font-size: 14px; color: #374151; line-height: 1.8; }
+.detail-lamar-wrap { display: flex; gap: 12px; margin-top: 8px; }
+.btn-lamar-utama {
+    padding: 12px 28px; background: #4f46e5; color: #fff;
+    border-radius: 10px; font-weight: 600; font-size: 14px; transition: background 0.2s;
+}
+.btn-lamar-utama:hover { background: #4338ca; }
+.btn-lamar-sekunder {
+    padding: 12px 28px; border: 1.5px solid #4f46e5; color: #4f46e5;
+    border-radius: 10px; font-weight: 600; font-size: 14px;
+}
+.btn-lamar-disabled {
+    padding: 12px 28px; background: #f1f5f9; color: #9ca3af;
+    border: 1.5px solid #e5e7eb; border-radius: 10px; font-weight: 600;
+    font-size: 14px; cursor: not-allowed;
+}
+.sidebar-box {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px;
+    padding: 16px; margin-bottom: 14px;
+}
+.sidebar-box h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.sidebar-perusahaan { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.sidebar-logo {
+    width: 36px; height: 36px; border-radius: 8px; background: #ede9fe;
+    color: #4f46e5; font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sidebar-info { font-size: 12px; color: #6b7280; margin-top: 4px; }
+.btn-lihat-profil {
+    display: block; margin-top: 12px; font-size: 13px; color: #4f46e5; font-weight: 500;
+}
+.sidebar-job-item { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+.sidebar-job-item:last-child { border-bottom: none; }
+.sidebar-job-title { font-size: 13px; font-weight: 500; color: #1a1a2e; }
+.sidebar-job-title:hover { color: #4f46e5; }
+
+/* ============================================================
+   PROFIL PERUSAHAAN
+   ============================================================ */
+.profil-hero {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 16px;
+    padding: 24px; display: flex; gap: 20px; align-items: center;
+    margin-bottom: 24px; flex-wrap: wrap;
+}
+.profil-logo-lg {
+    width: 72px; height: 72px; border-radius: 14px; background: #ede9fe;
+    color: #4f46e5; font-size: 22px; font-weight: 700; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+}
+.profil-info { flex: 1; }
+.profil-nama { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.profil-tipe { font-size: 13px; color: #6b7280; margin-bottom: 4px; }
+.profil-alamat { font-size: 13px; color: #6b7280; margin-top: 4px; }
+.profil-stats { display: flex; gap: 20px; }
+.profil-stat { text-align: center; }
+.profil-stat-num { display: block; font-size: 24px; font-weight: 700; color: #4f46e5; }
+.profil-stat-lbl { font-size: 11px; color: #6b7280; }
+.profil-section { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px; padding: 20px; }
+.profil-section-title {
+    font-size: 17px; font-weight: 600; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+}
+.badge-count {
+    font-size: 12px; background: #ede9fe; color: #4f46e5;
+    padding: 2px 10px; border-radius: 20px; font-weight: 500;
+}
+.profil-jobs { display: flex; flex-direction: column; gap: 12px; }
+.profil-job-card {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px; background: #f8fafc; border-radius: 10px; border: 1px solid #e5e7eb;
+}
+.profil-job-info { flex: 1; }
+.profil-job-info h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.profil-job-info h3 a { color: #1a1a2e; }
+.profil-job-info h3 a:hover { color: #4f46e5; }
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-app {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px;
+    padding: 24px; margin-bottom: 32px;
+}
+.about-app h2 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.about-app p { font-size: 14px; color: #374151; margin-bottom: 12px; line-height: 1.7; }
+.about-fitur { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.fitur-item {
+    font-size: 13px; background: #f0fdf4; color: #166534;
+    padding: 6px 14px; border-radius: 20px; border: 1px solid #bbf7d0;
+}
+.about-team-title { font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+.about-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.about-card {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px;
+    padding: 20px; text-align: center;
+}
+.about-avatar {
+    width: 64px; height: 64px; border-radius: 50%; background: #ede9fe;
+    color: #4f46e5; font-size: 20px; font-weight: 700; margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center;
+}
+.about-nama { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+.about-nim { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+.about-peran {
+    font-size: 11px; background: #ede9fe; color: #4f46e5;
+    padding: 3px 12px; border-radius: 20px; font-weight: 500; display: inline-block; margin-bottom: 10px;
+}
+.about-tugas { font-size: 12px; color: #6b7280; line-height: 1.6; }
+.about-info-box {
+    background: #fff; border: 1.5px solid #e5e7eb; border-radius: 14px; padding: 20px;
+}
+.about-info-box h3 { font-size: 16px; font-weight: 600; margin-bottom: 14px; }
+.about-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.about-table td { padding: 8px 12px; border-bottom: 1px solid #f1f5f9; }
+.about-table td:first-child { color: #6b7280; width: 160px; }
+.about-table td:last-child { font-weight: 500; }
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.section-cta { background: #4f46e5; color: #fff; padding: 60px 0; }
+.cta-inner { text-align: center; }
+.cta-inner h2 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+.cta-inner p { font-size: 15px; opacity: 0.9; margin-bottom: 24px; }
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-utama {
+    padding: 12px 28px; background: #fff; color: #4f46e5;
+    border-radius: 10px; font-weight: 700; font-size: 14px; transition: background 0.2s;
+}
+.btn-cta-utama:hover { background: #ede9fe; }
+.btn-cta-sekunder {
+    padding: 12px 28px; border: 2px solid rgba(255,255,255,0.7); color: #fff;
+    border-radius: 10px; font-weight: 600; font-size: 14px;
+}
+.btn-cta-sekunder:hover { background: rgba(255,255,255,0.1); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer { background: #1a1a2e; color: #9ca3af; padding: 48px 0 0; }
+.footer-inner {
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 32px; padding-bottom: 32px;
+}
+.footer-logo { font-size: 18px; font-weight: 700; color: #fff; display: block; margin-bottom: 10px; }
+.footer-brand p { font-size: 13px; line-height: 1.7; }
+.footer-links p { font-weight: 600; color: #fff; font-size: 14px; margin-bottom: 12px; }
+.footer-links a { display: block; font-size: 13px; margin-bottom: 8px; color: #9ca3af; }
+.footer-links a:hover { color: #fff; }
+.footer-bottom {
+    border-top: 1px solid #374151; padding: 16px 0;
+    text-align: center; font-size: 12px;
+}
+
+/* ============================================================
+   EMPTY STATE & UTILITIES
+   ============================================================ */
+.empty-state {
+    text-align: center; padding: 48px; background: #fff;
+    border-radius: 14px; border: 1.5px dashed #e5e7eb; color: #6b7280;
+}
+.empty-state p { font-size: 15px; margin-bottom: 12px; }
+.empty-state a { color: #4f46e5; font-weight: 500; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+    .hero-judul { font-size: 24px; }
+    .hero-search { flex-direction: column; }
+    .hero-stats { gap: 20px; }
+    .nav-menu { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: #fff; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .nav-menu.open { display: flex; }
+    .nav-hamburger { display: block; }
+    .nav-action { display: none; }
+    .layout-filter { flex-direction: column; }
+    .filter-sidebar { width: 100%; }
+    .layout-detail { flex-direction: column; }
+    .detail-sidebar { width: 100%; }
+    .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+    .profil-hero { flex-direction: column; text-align: center; }
+    .profil-stats { justify-content: center; }
+    .detail-info-grid { grid-template-columns: 1fr; }
+}
