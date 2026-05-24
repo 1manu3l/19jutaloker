@@ -405,3 +405,30 @@ input, select, textarea { font-family: var(--font); }
   .lamaran-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   FIX LAYOUT SIDEBAR
+   ================================================================ */
+
+.dash-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dash-main {
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .dash-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+}

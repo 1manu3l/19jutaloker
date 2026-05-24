@@ -55,7 +55,7 @@ require_once 'includes/header.php';
 <div class="container" style="padding-top:40px; padding-bottom:40px;">
 
     <!-- Info Aplikasi -->
-    <div class="about-app">
+    <div class="about-app-card">
         <h2>Tentang <?= APP_NAME ?></h2>
         <p>
             <strong><?= APP_NAME ?></strong> adalah portal lowongan kerja dan magang berbasis web
@@ -67,32 +67,32 @@ require_once 'includes/header.php';
             tanpa menggunakan library atau framework apapun, sebagai bagian dari tugas
             project mata kuliah Pemrograman Web.
         </p>
-        <div class="about-fitur">
-            <div class="fitur-item">✅ Multi-user (Admin, Perusahaan, Mahasiswa)</div>
-            <div class="fitur-item">✅ Sistem login & register dengan enkripsi password</div>
-            <div class="fitur-item">✅ Manajemen lowongan (CRUD)</div>
-            <div class="fitur-item">✅ Sistem lamaran online</div>
-            <div class="fitur-item">✅ Filter & pencarian lowongan</div>
-            <div class="fitur-item">✅ Profil perusahaan & mahasiswa</div>
+        <div class="about-fitur-grid">
+            <div class="about-fitur-item">✅ Multi-user (Admin, Perusahaan, Mahasiswa)</div>
+            <div class="about-fitur-item">✅ Sistem login & register dengan enkripsi password</div>
+            <div class="about-fitur-item">✅ Manajemen lowongan (CRUD)</div>
+            <div class="about-fitur-item">✅ Sistem lamaran online</div>
+            <div class="about-fitur-item">✅ Filter & pencarian lowongan</div>
+            <div class="about-fitur-item">✅ Profil perusahaan & mahasiswa</div>
         </div>
     </div>
 
     <!-- Kartu Anggota -->
     <h2 class="about-team-title">Anggota Kelompok</h2>
-    <div class="about-grid">
+    <div class="team-grid">
         <?php foreach ($anggota as $idx => $org): ?>
-        <div class="about-card">
-            <div class="about-avatar"><?= $org['inisial'] ?></div>
-            <h3 class="about-nama"><?= bersihkan($org['nama']) ?></h3>
-            <p class="about-nim">NIM: <?= bersihkan($org['nim']) ?></p>
-            <span class="about-peran"><?= bersihkan($org['peran']) ?></span>
-            <p class="about-tugas"><?= bersihkan($org['tugas']) ?></p>
+        <div class="team-card">
+            <div class="team-avatar"><?= $org['inisial'] ?></div>
+            <h3 class="team-nama"><?= bersihkan($org['nama']) ?></h3>
+            <p class="team-nim">NIM: <?= bersihkan($org['nim']) ?></p>
+            <span class="team-peran"><?= bersihkan($org['peran']) ?></span>
+            <p class="team-tugas"><?= bersihkan($org['tugas']) ?></p>
         </div>
         <?php endforeach; ?>
     </div>
 
     <!-- Info project -->
-    <div class="about-info-box">
+    <div class="about-info-card">
         <h3>Informasi Project</h3>
         <table class="about-table">
             <tr><td>Mata Kuliah</td><td>Pemrograman Web</td></tr>
