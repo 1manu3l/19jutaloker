@@ -16,37 +16,29 @@ $baseCSS = '';
 // ============================================================
 $anggota = [
     [
-        'nama'    => 'Nama Anggota 1',
-        'nim'     => '123456001',
+        'nama'    => 'Imanuel Patandean',
+        'nim'     => '240211060004',
         'peran'   => 'Database & Autentikasi',
         'tugas'   => 'config.php, auth_check.php, login, register, database SQL',
         'foto'    => 'assets/uploads/foto/default.png',
         'inisial' => 'A1',
     ],
     [
-        'nama'    => 'Nama Anggota 2',
-        'nim'     => '123456002',
+        'nama'    => 'Matthew Hyydemans',
+        'nim'     => '240211060047',
         'peran'   => 'Halaman Publik & CSS',
         'tugas'   => 'index.php, lowongan.php, detail, profil perusahaan, style.css',
         'foto'    => 'assets/uploads/foto/default.png',
         'inisial' => 'A2',
     ],
     [
-        'nama'    => 'Nama Anggota 3',
-        'nim'     => '123456003',
+        'nama'    => 'Glory Manurung',
+        'nim'     => '240211060037',
         'peran'   => 'Panel Admin',
-        'tugas'   => 'admin/: dashboard, CRUD lowongan, user, kategori, lamaran',
+        'tugas'   => 'admin/: dashboard, CRUD lowongan, user, kategori, lamaran; mahasiswa/: lowongan, lamar, riwayat. perusahaan/: lowongan, lamaran',
         'foto'    => 'assets/uploads/foto/default.png',
         'inisial' => 'A3',
-    ],
-    [
-        'nama'    => 'Nama Anggota 4',
-        'nim'     => '123456004',
-        'peran'   => 'Panel Mahasiswa & Perusahaan',
-        'tugas'   => 'mahasiswa/: lowongan, lamar, riwayat. perusahaan/: lowongan, lamaran',
-        'foto'    => 'assets/uploads/foto/default.png',
-        'inisial' => 'A4',
-    ],
+    ]
 ];
 
 require_once 'includes/header.php';
